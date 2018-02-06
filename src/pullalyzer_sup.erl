@@ -35,7 +35,7 @@ init([]) ->
     },
     ChildDescriptor = #{
         id => pullalyzer_app,
-        start => {pullalyzer_app, start_link, []},
+        start => {pullalyzer_app, start, [one, two]},
         restart => permanent,
         shutdown => 5000,
         type => supervisor,
